@@ -1,24 +1,18 @@
-const hiddenMessage = ["X", "X", "X", "X", "W", "X", "E",  "X", "X", "X", "X", "X", "L", "X", "X", "X", "X", "X", "X", "X", "X", "X", "X", "X", "X", "X", "X", "X", "X", "X", "X", "X", "X", "L", "X", "X", "X", "X", "X", "X", "X", "X", "X", " ","X", "X", "X", "X", "X", "X", "X", "X", "D", "X", "X", "X", "X", "X", "X", "X", "X", "X", "X", "X", "X", "X", "X", "X", "X", "X", "X", "X", "X", "X", "X", "X", "X", "X", "X", "X", "X", "X", "X", "X", "X", "X", "O", "X", "X", "X", "X", "X", "X", "N", "X", "X", "X", "X", "E", "X", "X", "X", "X", "X", "X", "X", "X", "X", "X", ",", "X", " ", "X"]
-
-const arrayWithoutB = [];
-
-for (let i = 0; i < hiddenMessage.length; i++) {
-    if (hiddenMessage[i] !== "X") {
-        arrayWithoutB.push(hiddenMessage[i]);
-    }
+// Declare and define three variables using a numerical value
+// demander a l'utilisateur un chiffre
+var chiffre1 = prompt("Entrez un chiffre");
+var chiffre2 = prompt("Entrez un chiffre");
+var chiffre3 = prompt("Entrez un chiffre");
+// * If the three variables are equal, display "The three variables are the same" in the console
+if (chiffre1 == chiffre2 && chiffre2 == chiffre3) {
+    console.log("Les trois variables sont identiques");
 }
-console.log(arrayWithoutB.join(' ') , "Le message secret est décodé");
-console.log(arrayWithoutB.join(' '), " Le message secret ne contient pas de X ni de chiffres pairs");
+// * If only two of the variables are equal, display "Two of the variables are the same" in the console
+else if (chiffre1 == chiffre2 || chiffre2 == chiffre3 || chiffre1 == chiffre3) {
+    console.log("Deux des variables sont identiques");
+}
+// * If the variables are all different display "all variables are different" in the console
+else {
+    console.log("Les trois variables sont différentes");
+}
 
-
-const hiddenCode = "XXXXXXXXXXXXXXXXXXXXXXXXXXXCXXXXXXXOXXXXXDXXXXXXXXXXXXXXXEXXXX XXXXXXXXXXXXXXX:X0XXXXXXX2XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX3XXXXXX2XXXXXXXXX2XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX4XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX6XXXXXXXXXXXXXXX6XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX7XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX2XXXXXXXXXX8XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX8XXXXXXXXXXX4XXXXXXXXXXXX6XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX4XXXXXXXXXXXXXXXXXXX9XXXX9XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX2XXX4XXXXXXXXXXX6XXXXXXXXX2XXXXXXXX3XXXXXXXX2XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX4XXXXX"
-
-
-const arr = hiddenCode.split('');
-console.log(arr);
-const arrWithoutX = arr.filter((letter) => letter !== "X");
-console.log(arrWithoutX);
-//Le message secret ne contient pas de X ni de chiffres pairs
-const arrWithoutXAndEven = arrWithoutX.filter((letter) => letter % 2 !== 0);
-console.log(arrWithoutXAndEven);
-console.log(arrWithoutXAndEven.join(' '), "Le message secret ne contient pas de X ni de chiffres pairs");
